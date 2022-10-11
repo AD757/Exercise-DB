@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
