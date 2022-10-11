@@ -1,6 +1,6 @@
 # Exercise DB
 
-This project is powered by Exercise DB & API for fetching the individual exercise and animated demonstrations data in the application.
+This project is powered by Exercise DB & Rapid API for fetching the individual exercise and animated demonstrations data in the application.
 
 ## Screen
 
@@ -8,4 +8,4 @@ This project is powered by Exercise DB & API for fetching the individual exercis
 
 ### Link
 
-- [Exercise DB]()
+- [Exercise DB](https://exercise-db.netlify.app/)
