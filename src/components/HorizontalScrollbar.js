@@ -81,7 +81,7 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
       <Button onClick={LeftHandler}>
         <KeyboardArrowLeftIcon />
       </Button>
-      <ScrollMenuDiv ref={ref}>
+      <ScrollMenu ref={ref}>
         {BodyPartImage.map((item) => (
           <Scroll
             key={item.id || item.text}
@@ -96,7 +96,7 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
             />
           </Scroll>
         ))}
-      </ScrollMenuDiv>
+      </ScrollMenu>
       <Button onClick={RightHandler}>
         <KeyboardArrowRightIcon />
       </Button>
@@ -111,7 +111,7 @@ const Wrapper = styled.div`
     gap: 1rem;
   }
 `;
-const ScrollMenuDiv = styled.div`
+const ScrollMenu = styled.div`
   width: 100%;
   height: auto;
   display: flex;

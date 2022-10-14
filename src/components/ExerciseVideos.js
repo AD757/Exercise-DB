@@ -24,7 +24,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         <Button onClick={LeftHandler}>
           <KeyboardArrowLeftIcon />
         </Button>
-        <ScrollMenuDiv ref={ref}>
+        <ScrollMenu ref={ref}>
           {exerciseVideos.map((item, index) => (
             <iframe
               className="video_responsive"
@@ -36,7 +36,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               loading="lazy"
             />
           ))}
-        </ScrollMenuDiv>
+        </ScrollMenu>
         <Button onClick={RightHandler}>
           <KeyboardArrowRightIcon />
         </Button>
@@ -87,7 +87,7 @@ const Container = styled.div`
   }
 `;
 
-const ScrollMenuDiv = styled.div`
+const ScrollMenu = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -145,7 +145,7 @@ const Button = styled.button`
   }
   @media screen and (min-width: 280px) and (max-width: 500px) {
     padding: 0.3rem;
-    display: none;
+    
   }
 `;
 export default ExerciseVideos;

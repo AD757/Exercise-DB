@@ -18,13 +18,13 @@ const SimilarHorizontal = ({ targetMuscleExercises }) => {
       <Button onClick={LeftHandler}>
         <KeyboardArrowLeftIcon />
       </Button>
-      <ScrollMenuDiv ref={ref}>
+      <ScrollMenu ref={ref}>
         {targetMuscleExercises.map((item) => (
           <div className="child" key={item}>
             <ExerciseCard exercise={item} flg={true} />
           </div>
         ))}
-      </ScrollMenuDiv>
+      </ScrollMenu>
       <Button onClick={RightHandler}>
         <KeyboardArrowRightIcon />
       </Button>
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     gap: 1.5rem;
   }
 `;
-const ScrollMenuDiv = styled.div`
+const ScrollMenu = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -77,7 +77,6 @@ const Button = styled.button`
   }
   @media screen and (min-width: 280px) and (max-width: 500px) {
     padding: 0.3rem;
-    display: none;
   }
 `;
 

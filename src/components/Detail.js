@@ -26,12 +26,12 @@ const ExerciseDetail = ({ exerciseDetail }) => {
         <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       </div>
       <div className="content">
-        <h3 className="heading">{name}</h3>
+      <Heading>{name}</Heading>
         {ExtraDetails.map((item) => (
           <div key={item} className="muscleDetail">
-            <div className="muscleImage">
-              <img src={item.icon} alt={item.name} />
-            </div>
+          <div className="image">
+         <img src={item.icon} alt={item.name} />
+         </div>
             <p>{item.name}</p>
           </div>
         ))}
@@ -44,11 +44,10 @@ const DetailCard = styled.div`
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
-  width: 50vh;
+  width: 600px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   padding: 2rem 3rem;
-  gap: 7rem;
   .image {
     width: 50%;
     display: flex;
@@ -63,13 +62,6 @@ const DetailCard = styled.div`
     flex-direction: column;
     align-content: center;
     justify-content: center;
-
-    .heading {
-      margin-top: 2rem;
-      font-size: 2rem;
-      font-weight: bold;
-      text-transform: capitalize;
-    }
 
     .muscleDetail {
       margin-top: 2rem;
@@ -95,7 +87,7 @@ const DetailCard = styled.div`
         }
       }
       p {
-        font-size: 1.3rem;
+        font-size: 1rem;
         text-transform: capitalize;
         color: #191f2a;
       }
@@ -103,23 +95,15 @@ const DetailCard = styled.div`
   }
 
   @media screen and (min-width: 520px) and (max-width: 768px) {
-    flex-direction: column;
     padding: 2rem;
     gap: 2rem;
-
-    .image {
-      margin: auto 0;
-    }
+  
     .content {
       display: flex;
       flex-direction: column;
       align-content: center;
       justify-content: center;
       padding: 0 1rem;
-
-      .heading {
-        margin: 0;
-      }
 
       .muscleDetail {
         div {
@@ -132,35 +116,41 @@ const DetailCard = styled.div`
 
   @media screen and (min-width: 280px) and (max-width: 500px) {
     flex-direction: column;
+    align-items: center;
     padding: 0.5rem;
     gap: 2rem;
+    width: 90%;
 
-    .image {
-      margin: auto auto;
-    }
     .content {
       display: flex;
       flex-direction: column;
-      align-content: center;
-      justify-content: center;
+      align-content: left;
+      justify-content: left;
       padding: 0 0.7rem;
       margin-bottom: 1.5rem;
-
-      .heading {
-        margin: 0;
-        font-size: 1.6rem;
-      }
 
       .muscleDetail {
         div {
           width: 50px;
           height: 50px;
         }
-        p {
-          font-size: 1.2rem;
-        }
       }
     }
   }
 `;
+
+const Heading = styled.text`
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 280px) and (max-width: 500px) {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+`;
+
 export default ExerciseDetail;
