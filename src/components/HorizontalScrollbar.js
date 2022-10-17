@@ -7,7 +7,10 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import {
   FullBody,
   LowerBody,
-  UpperBody,
+  Calf,
+  LowerArms,
+  Shoulders,
+  Neck,
   Arms,
   Back,
   Chest,
@@ -35,19 +38,19 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
     },
     {
       text: "5",
-      img: Arms,
+      img: LowerArms,
     },
     {
       text: "6",
-      img: LowerBody,
+      img: Calf,
     },
     {
       text: "7",
-      img: Arms,
+      img: Neck,
     },
     {
       text: "8",
-      img: UpperBody,
+      img: Shoulders,
     },
     {
       text: "9",
