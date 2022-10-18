@@ -20,7 +20,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         Video demonstration on
         <strong style={{ color: "#E01E5A" }}> {name}</strong>
       </h2>
-      <div class="box">
+      <div className="box">
         <Button onClick={LeftHandler}>
           <KeyboardArrowLeftIcon />
         </Button>
@@ -145,7 +145,6 @@ const Button = styled.button`
   }
   @media screen and (min-width: 280px) and (max-width: 500px) {
     padding: 0.3rem;
-    
   }
 `;
 export default ExerciseVideos;

@@ -28,6 +28,12 @@ const SearchExercise = ({
     setSearch(e.target.value.toLowerCase());
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      submitHandler(true);
+    }
+  };
+
   const submitHandler = async () => {
     if (search) {
       const exercisesData = await FetchData(
@@ -66,6 +72,7 @@ const SearchExercise = ({
             placeholder="Search Exercise..."
             value={search}
             onChange={searchHandler}
+            onKeyDown={handleKeyDown}
           />
           <Button onClick={submitHandler}>Search</Button>
         </div>

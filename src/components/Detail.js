@@ -25,13 +25,13 @@ const ExerciseDetail = ({ exerciseDetail }) => {
       <div className="image">
         <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       </div>
-      <div className="content">
       <Heading>{name}</Heading>
+      <div className="content">
         {ExtraDetails.map((item) => (
           <div key={item} className="muscleDetail">
-          <div className="image">
-         <img src={item.icon} alt={item.name} />
-         </div>
+            <div className="image">
+              <img src={item.icon} alt={item.name} />
+            </div>
             <p>{item.name}</p>
           </div>
         ))}
@@ -58,6 +58,7 @@ const DetailCard = styled.div`
     }
   }
   .content {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -69,8 +70,8 @@ const DetailCard = styled.div`
       gap: 1.5rem;
       align-items: center;
       div {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         background-color: #fafafa;
         border-radius: 50%;
         display: flex;
@@ -83,7 +84,7 @@ const DetailCard = styled.div`
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         img {
-          width: 100%;
+          width: 35px;
         }
       }
       p {
@@ -97,7 +98,7 @@ const DetailCard = styled.div`
   @media screen and (min-width: 520px) and (max-width: 768px) {
     padding: 2rem;
     gap: 2rem;
-  
+
     .content {
       display: flex;
       flex-direction: column;
@@ -118,7 +119,6 @@ const DetailCard = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
-    gap: 2rem;
     width: 90%;
 
     .content {
@@ -140,17 +140,15 @@ const DetailCard = styled.div`
 `;
 
 const Heading = styled.text`
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
 
   @media screen and (min-width: 280px) and (max-width: 500px) {
-    font-size: 1rem;
     text-align: left;
   }
-
 `;
 
 export default ExerciseDetail;
