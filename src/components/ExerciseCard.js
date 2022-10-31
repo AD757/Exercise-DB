@@ -34,8 +34,8 @@ const Heading = styled.text`
 `;
 
 const ExerciseCardWrapper = styled.div`
-  width: 350px;
-  height: 420px;
+  width: 320px;
+  height: 350px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -56,7 +56,7 @@ const ExerciseCardWrapper = styled.div`
     gap: 1rem;
     .btn {
       margin-bottom: 12px;
-      padding: 12px;
+      padding: 8px;
       border: none;
       background-color: #e01e5a;
       text-transform: capitalize;

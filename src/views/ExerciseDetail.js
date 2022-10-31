@@ -6,7 +6,7 @@ import {
   exerciseOptions,
   youtubeSearchOptions,
 } from "../utlis/fetchData";
-import Detail from "../components/Detail";
+import DetailCard from "../components/DetailCard";
 import ExerciseVideos from "../components/ExerciseVideos";
 import SimilarExercises from "../components/SimilarExercises";
 import Loader from "../components/Loader";
@@ -71,7 +71,7 @@ const ExerciseDetail = () => {
         <Loader />
       ) : (
         <Box>
-          <Detail exerciseDetail={exerciseDetail} />
+          <DetailCard exerciseDetail={exerciseDetail} />
           <ExerciseVideos
             exerciseVideos={exerciseVideos}
             name={exerciseDetail.name}

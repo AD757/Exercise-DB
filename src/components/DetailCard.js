@@ -42,36 +42,36 @@ const ExerciseDetail = ({ exerciseDetail }) => {
 
 const DetailCard = styled.div`
   margin: 20px auto;
-  display: flex;
-  justify-content: space-between;
-  width: 600px;
+  flex-direction: row;
+  align-items: center;
+  width: 350px;
+
+  text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 2rem 3rem;
+  padding: 2rem;
+  gap: 2rem;
   .image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     img {
-      width: 100%;
+      width: 80%;
     }
   }
   .content {
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    padding: 0 1rem;
 
     .muscleDetail {
-      margin-top: 2rem;
+      margin-top: 1rem;
       display: flex;
-      gap: 1.5rem;
+      gap: 10px;
       align-items: center;
       div {
-        width: 50px;
-        height: 50px;
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
         background-color: #fafafa;
         border-radius: 50%;
         display: flex;
@@ -84,11 +84,12 @@ const DetailCard = styled.div`
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         img {
-          width: 35px;
+          width: 30px;
         }
       }
       p {
-        font-size: 1rem;
+        font-size: 15px;
+        text-align: center;
         text-transform: capitalize;
         color: #191f2a;
       }
@@ -98,43 +99,12 @@ const DetailCard = styled.div`
   @media screen and (min-width: 520px) and (max-width: 768px) {
     padding: 2rem;
     gap: 2rem;
-
     .content {
       display: flex;
       flex-direction: column;
       align-content: center;
       justify-content: center;
       padding: 0 1rem;
-
-      .muscleDetail {
-        div {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 280px) and (max-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    width: 90%;
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-content: left;
-      justify-content: left;
-      padding: 0 0.7rem;
-      margin-bottom: 1.5rem;
-
-      .muscleDetail {
-        div {
-          width: 50px;
-          height: 50px;
-        }
-      }
     }
   }
 `;

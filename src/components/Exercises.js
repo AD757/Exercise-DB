@@ -6,7 +6,7 @@ import ExerciseCard from "./ExerciseCard";
 
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const ExercisePerPage = 9;
+  const ExercisePerPage = 12;
   const indexOfLastExercise = currentPage * ExercisePerPage;
   const indexOfFirstExercise = indexOfLastExercise - ExercisePerPage;
   const currentExercises = exercises.slice(
@@ -55,7 +55,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
             count={Math.ceil(exercises.length / ExercisePerPage)}
             page={currentPage}
             onChange={paginate}
-            size="medium"
+            size="large"
           />
         )}
       </PaginationWrapper>
